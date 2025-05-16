@@ -111,3 +111,14 @@ globalarchivebin
 worldarchivebin
 universalarchivebin
 ```
+
+### 🔹 Step 4: Run the Script
+```bash
+./shares.sh
+```
+Output:
+You’ll see lots of denied messages until:
+```css
+[+] Anonymous access allowed for: pubfiles
+```
+That means pubfiles is accessible anonymously.
