@@ -31,3 +31,7 @@ The goal of this challenge is to identify an SMB share that allows **anonymous a
 
 ```bash
 smbclient -L //target.ine.local -N
+
+### 🔹 Step 2: Create Enumeration Script (shares.sh)
+
+nano shares.sh
