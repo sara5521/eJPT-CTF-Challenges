@@ -119,6 +119,7 @@ universalarchivebin
 ./shares.sh
 ```
 ![Step 3 - Brute Forcing Shares](./3.png)
+
 Output:
 You’ll see lots of denied messages until:
 ```css
