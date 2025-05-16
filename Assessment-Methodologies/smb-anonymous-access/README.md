@@ -67,7 +67,7 @@ chmod +x shares.sh
 ```
 
 ### 🔹 Step 3: Create the Wordlist (shares.txt)
-```bash
+```text
 publicdata
 communitydata
 openstorage
