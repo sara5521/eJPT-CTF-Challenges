@@ -133,3 +133,27 @@ smb: \> ls
 ```
 You’ll see something like:
 flag1.txt
+
+### 🔹 Step 6: Download the Flag
+```bash
+smb: \> get flag1.txt
+```
+Exit the session:
+```bash
+smb: \> exit
+```
+
+### 🔹 Step 7: View the Flag
+```bash
+cat flag1.txt
+```
+✅ Final Output:
+FLAG{56a55b23a464f5b8893fe22c6e3d611}
+
+## Conclusion
+This lab highlights the importance of checking for misconfigured Samba shares that allow anonymous access. Attackers can exploit this to discover sensitive files like backup data, credentials, or flags.
+
+## Files Included
+- `shares.sh`: The script used to enumerate shares
+- `shares.txt`: Wordlist of possible SMB share names
+- `flag1.txt`: Retrieved flag from the anonymous share
