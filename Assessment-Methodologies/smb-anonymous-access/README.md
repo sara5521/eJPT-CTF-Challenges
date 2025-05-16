@@ -66,6 +66,7 @@ Make it executable:
 ```bash
 chmod +x shares.sh
 ```
+![Step 2 - Created Script](./2.png)
 
 ### 🔹 Step 3: Create the Wordlist (shares.txt)
 ```text
@@ -123,6 +124,8 @@ You’ll see lots of denied messages until:
 [+] Anonymous access allowed for: pubfiles
 ```
 That means pubfiles is accessible anonymously.
+![Step 3 - Brute Forcing Shares](./3.png)
+![Step 4 - Found Anonymous Access](./4.png)
 
 ### 🔹 Step 5: Access the Share
 ```bash
@@ -143,6 +146,7 @@ Exit the session:
 ```bash
 smb: \> exit
 ```
+![Step 5 - Retrieved Flag](./5.png)
 
 ### 🔹 Step 7: View the Flag
 ```bash
@@ -150,6 +154,7 @@ cat flag1.txt
 ```
 ✅ Final Output:
 FLAG{56a55b23a464f5b8893fe22c6e3d611}
+![Step 6 - Viewed Flag Content](./6.png)
 
 ## Conclusion
 This lab highlights the importance of checking for misconfigured Samba shares that allow anonymous access. Attackers can exploit this to discover sensitive files like backup data, credentials, or flags.
@@ -158,12 +163,3 @@ This lab highlights the importance of checking for misconfigured Samba shares th
 - `shares.sh`: The script used to enumerate shares
 - `shares.txt`: Wordlist of possible SMB share names
 - `flag1.txt`: Retrieved flag from the anonymous share
-
-## Screenshots of my solution:
-![Step 1 - Initial SMB Error](./1.png)
-![Step 2 - Created Script](./2.png)
-![Step 3 - Brute Forcing Shares](./3.png)
-![Step 4 - Found Anonymous Access](./4.png)
-![Step 5 - Retrieved Flag](./5.png)
-![Step 6 - Viewed Flag Content](./6.png)
-
