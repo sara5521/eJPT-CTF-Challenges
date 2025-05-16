@@ -125,8 +125,9 @@ You’ll see lots of denied messages until:
 ```css
 [+] Anonymous access allowed for: pubfiles
 ```
-That means pubfiles is accessible anonymously.
 ![Step 4 - Found Anonymous Access](./4.png)
+
+That means pubfiles is accessible anonymously.
 
 ### 🔹 Step 5: Access the Share
 ```bash
