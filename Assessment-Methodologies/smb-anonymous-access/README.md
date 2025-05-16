@@ -118,13 +118,13 @@ universalarchivebin
 ```bash
 ./shares.sh
 ```
+![Step 3 - Brute Forcing Shares](./3.png)
 Output:
 You’ll see lots of denied messages until:
 ```css
 [+] Anonymous access allowed for: pubfiles
 ```
 That means pubfiles is accessible anonymously.
-![Step 3 - Brute Forcing Shares](./3.png)
 ![Step 4 - Found Anonymous Access](./4.png)
 
 ### 🔹 Step 5: Access the Share
