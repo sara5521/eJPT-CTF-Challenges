@@ -38,6 +38,7 @@ smbclient -L //target.ine.local -N
 ```bash
 nano shares.sh
 ```
+Paste the following script:
 ```bash
 #!/bin/bash
 
@@ -59,4 +60,8 @@ while read -r SHARE; do
         echo "[-] Access denied for: $SHARE"
     fi
 done < "$WORDLIST"
+```
+Make it executable:
+```bash
+chmod +x shares.sh
 ```
