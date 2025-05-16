@@ -122,3 +122,14 @@ You’ll see lots of denied messages until:
 [+] Anonymous access allowed for: pubfiles
 ```
 That means pubfiles is accessible anonymously.
+
+### 🔹 Step 5: Access the Share
+```bash
+smbclient //target.ine.local/pubfiles -N
+```
+List contents:
+```bash
+smb: \> ls
+```
+You’ll see something like:
+flag1.txt
