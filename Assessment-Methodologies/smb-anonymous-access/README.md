@@ -157,3 +157,12 @@ This lab highlights the importance of checking for misconfigured Samba shares th
 - `shares.sh`: The script used to enumerate shares
 - `shares.txt`: Wordlist of possible SMB share names
 - `flag1.txt`: Retrieved flag from the anonymous share
+
+## Screenshots of my solution:
+![Step 1 - Initial SMB Error](./1.png)
+![Step 2 - Created Script](./2.png)
+![Step 3 - Brute Forcing Shares](./3.png)
+![Step 4 - Found Anonymous Access](./4.png)
+![Step 5 - Retrieved Flag](./5.png)
+![Step 6 - Viewed Flag Content](./6.png)
+
