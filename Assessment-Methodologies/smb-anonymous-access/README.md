@@ -32,6 +32,7 @@ The goal of this challenge is to identify an SMB share that allows **anonymous a
 ```bash
 smbclient -L //target.ine.local -N
 ```
+![Step 1 - Initial SMB Error](./1.png)
 
 ### 🔹 Step 2: Create Enumeration Script (shares.sh)
 
