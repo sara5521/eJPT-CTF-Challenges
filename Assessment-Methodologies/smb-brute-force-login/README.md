@@ -33,3 +33,4 @@ Use Metasploit to brute force SMB credentials using user and password wordlists.
 msfconsole -q
 use auxiliary/scanner/smb/smb_login
 set RHOSTS target.ine.local
+```
