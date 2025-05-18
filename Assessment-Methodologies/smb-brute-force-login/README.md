@@ -41,6 +41,7 @@ The tool successfully identified local users:
 - `bob`
 - `nancy`
 - `alice`
+
 ![Step 1](./8.png)
 
 ### 🔹 Step : Launch Metasploit and Load SMB Login Module
