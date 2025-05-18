@@ -34,7 +34,7 @@ smbclient -L //target.ine.local -N
 ```
 ![Step 1 - Initial SMB Error](./1.png)
 
-### 🔹 Step 2: Create Enumeration Script (shares.sh)
+### 🔹 Step 2: Create Enumeration Script `shares.sh`
 
 ```bash
 nano shares.sh
@@ -68,7 +68,7 @@ chmod +x shares.sh
 ```
 ![Step 2 - Created Script](./2.png)
 
-### 🔹 Step 3: Create the Wordlist (shares.txt)
+### 🔹 Step 3: Create the Wordlist `shares.txt`
 ```text
 publicdata
 communitydata
@@ -154,10 +154,11 @@ smb: \> exit
 ```bash
 cat flag1.txt
 ```
-![Step 6 - Viewed Flag Content](./6.png)
-
-✅ Final Output:
+Final Output:
+```bash
 FLAG{56a55b23a464f5b8893fe22c6e3d611}
+```
+![Step 6 - Viewed Flag Content](./6.png)
 
 ## Conclusion
 This lab highlights the importance of checking for misconfigured Samba shares that allow anonymous access. Attackers can exploit this to discover sensitive files like backup data, credentials, or flags.
