@@ -166,3 +166,4 @@ This lab highlights the importance of checking for misconfigured Samba shares th
 - `shares.sh`: The script used to enumerate shares
 - `shares.txt`: Wordlist of possible SMB share names
 - `flag1.txt`: Retrieved flag from the anonymous share
+- - Screenshots: 1.png → 6.png (steps of the challenge)
