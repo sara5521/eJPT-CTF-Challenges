@@ -81,3 +81,8 @@ Psst! I heard there is an FTP service running. Find it and check the banner.
 
 ## Conclusion
 This challenge demonstrates how password spraying and brute-force attacks using Metasploit can help identify weak credentials on SMB services — which in real environments can lead to full network compromise.
+
+## Files Included
+- `users.txt`: Wordlist used for usernames
+- `flag2.txt`: Retrieved file containing the flag
+- Screenshots: 1.png → 6.png (steps of the challenge)
