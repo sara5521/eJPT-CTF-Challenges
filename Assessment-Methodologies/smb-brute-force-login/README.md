@@ -37,7 +37,7 @@ set RHOSTS target.ine.local
 
 ### 🔹 Step 2: Create a User Wordlist
 
-Created users.txt with common usernames:
+Created `users.txt` with common usernames:
 ```bash
 josh
 bob
@@ -57,7 +57,7 @@ run
 josh : purple
 ```
 
-### 🔹 Step 5: Access SMB Share Using smbclient
+### 🔹 Step 5: Access SMB Share Using `smbclient`
 ```bash
 smbclient //target.ine.local/josh -U josh
 ```
