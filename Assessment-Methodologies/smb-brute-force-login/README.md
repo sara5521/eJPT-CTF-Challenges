@@ -107,4 +107,4 @@ This challenge demonstrates how password spraying and brute-force attacks using 
 ## Files Included
 - `users.txt`: Wordlist used for usernames
 - `unix_passwords.txt`: Wordlist used for passwords
-- Screenshots: 1.png → 6.png (steps of the challenge)
+- Screenshots: 1.png → 8.png (steps of the challenge)
