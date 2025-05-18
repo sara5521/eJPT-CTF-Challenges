@@ -20,6 +20,7 @@ The goal of this challenge is to identify an SMB share that allows **anonymous a
 ## Tools Used
 
 - `smbclient`: to query SMB shares
+- Wordlist (`shares.txt`
 - `bash`: to script brute-force enumeration of share names
 - `nano` / `chmod`: to edit and execute the script
 
