@@ -84,5 +84,5 @@ This challenge demonstrates how password spraying and brute-force attacks using 
 
 ## Files Included
 - `users.txt`: Wordlist used for usernames
-- `flag2.txt`: Retrieved file containing the flag
+- `unix_passwords.txt`: Wordlist used for passwords
 - Screenshots: 1.png → 6.png (steps of the challenge)
