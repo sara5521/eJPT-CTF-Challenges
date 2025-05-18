@@ -66,6 +66,8 @@ while read -r SHARE; do
     fi
 done < "$WORDLIST"
 ```
+> 📌 The `shares.sh` script used in this challenge is originally credited to [Prinugupta on Medium](https://prinugupta.medium.com/assessment-methodologies-enumeration-ctf-1-ejpt-ine-74461effd6a7).
+
 Make it executable:
 ```bash
 chmod +x shares.sh
