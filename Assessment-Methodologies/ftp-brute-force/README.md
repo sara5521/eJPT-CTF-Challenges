@@ -80,7 +80,9 @@ Use `ls` to list and `get flag3.txt` to download.
 cat flag3.txt
 ```
 Output:
+```bash
 FLAG3{232c4bdafc8844129123cfaeaa5c4e68}
+```
 
 ## Conclusion
 Through enumeration, service discovery, and brute-forcing techniques, we were able to extract sensitive credentials and retrieve the flag from a hidden FTP service.
