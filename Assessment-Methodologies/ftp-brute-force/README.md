@@ -35,12 +35,16 @@ Initial scan shows SMB and SSH.
 ```bash
 nmap -sV target.ine.local
 ```
+![Step 1](./1.png)
+
 To discover all services, use full port scan:
 
 ```bash
 nmap -p- -sV target.ine.local
 ```
 We find an FTP service on port `5554`.
+![Step 1](./2.png)
+
 ### 🔹 Step 2: Grab FTP Banner
 
 ```bash
