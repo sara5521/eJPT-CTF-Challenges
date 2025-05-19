@@ -66,6 +66,7 @@ ashley
 amanda
 ```
 ![Step 4](./4.png)
+
 ![Step 5](./5.png)
 
 ### 🔹 Step 4: Brute Force FTP Credentials
