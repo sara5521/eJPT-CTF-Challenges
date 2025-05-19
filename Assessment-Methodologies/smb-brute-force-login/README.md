@@ -44,7 +44,7 @@ The tool successfully identified local users:
 
 ![Step 1](./8.png)
 
-### 🔹 Step : Launch Metasploit and Load SMB Login Module
+### 🔹 Step 2: Launch Metasploit and Load SMB Login Module
 
 ```bash
 msfconsole -q
