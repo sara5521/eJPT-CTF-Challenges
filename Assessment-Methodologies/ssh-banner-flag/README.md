@@ -1,4 +1,4 @@
-# Assessment Methodologies - Flag 4 Walkthrough
+# Assessment Methodologies - Ssh Banner Flag
 
 This document contains the step-by-step walkthrough for solving **Flag 4** of the Enumeration CTF in the eJPT Assessment Methodologies lab.
 
